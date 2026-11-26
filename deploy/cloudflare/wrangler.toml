@@ -1,0 +1,9 @@
+name = "atoms-path-router"
+main = "worker.js"
+compatibility_date = "2026-11-26"
+workers_dev = false
+preview_urls = false
+routes = [{ pattern = "jokeyking.com/atoms*", zone_name = "jokeyking.com" }]
+
+[vars]
+ATOMS_ORIGIN = "https://atoms-web-production-dcd9240c.up.railway.app"

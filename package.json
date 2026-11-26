@@ -1,0 +1,7 @@
+{
+  "name": "atoms-studio-demo",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "description": "A browser-first, standalone HTML application studio"
+}
