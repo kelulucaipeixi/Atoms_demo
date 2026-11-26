@@ -26,15 +26,6 @@ python3 server.py
 
 邮箱登录使用 Resend 发送六位一次性验证码。验证码 10 分钟内有效，首次验证邮箱自动创建账号，已有邮箱账号保留原账号 ID。登录会话和验证码校验数据储存在持久化目录的 SQLite 中。新建项目、克隆项目、克隆模板和编辑模板需要登录。登录后会回到对应的草稿或克隆确认。访客可以浏览和预览发现与模板。已登录账号使用独立的服务端源码目录。同一浏览器按访客和账号分别保存项目列表与对话。
 
-在 Railway 的 `atoms-web` 服务设置 `RESEND_API_KEY` 和 `STUDIO_EMAIL_FROM`。发件地址需要属于已在 Resend 验证的域名，例如 `login@send.jokeyking.com`。先确认邮件能送达，再把生产登录切换到验证码。
-
-在 Railway 为任一第三方登录设置两个服务变量即可显示入口。Google 使用 `GOOGLE_CLIENT_ID` 和 `GOOGLE_CLIENT_SECRET`，GitHub 使用 `GITHUB_CLIENT_ID` 和 `GITHUB_CLIENT_SECRET`。分别注册以下 HTTPS 回调。站点使用 `STUDIO_PUBLIC_ORIGIN=https://jokeyking.com` 与 `STUDIO_BASE_PATH=/atoms`。
-
-- Google 回调 `https://jokeyking.com/atoms/api/auth/google/callback`
-- GitHub 回调 `https://jokeyking.com/atoms/api/auth/github/callback`
-
-邮箱、Google 和 GitHub 账号按各自的登录身份区分。
-
 ## 体验路径
 
 1. 在首页输入“创建一个名为「设计冲刺」的绿色任务看板”，点击生成。
